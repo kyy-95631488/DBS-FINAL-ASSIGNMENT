@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Note Finder App</title>
+    
+    <!-- Favicons -->
+  <link rel="icon" href="favicons/favicon.png"><script defer src="bundle.js"></script></head>
+  <body>
+    <header>
+      <app-bar></app-bar>
+    </header>
+
+    <main>
+      <div class="container">
+        <section-with-title id="note" class="note" title="Notes List">
+          <div id="searchBarContainer" class="search-bar-container">
+            <search-bar>
+              <query-waiting></query-waiting>
+            </search-bar>
+          </div>
+    
+          <div id="noteListContainer" class="note-list-container">
+            <search-loading></search-loading>
+            <loading-spinner id="loadingSpinner"></loading-spinner>
+            <loading-spinner></loading-spinner>
+            <note-list></note-list>
+          </div>
+          
+          <div id="notification" class="notification" style="display: none;"></div>
+          <!-- Form tambah catatan -->
+          <div class="add-note-form-container">
+            <form id="addNoteForm">
+              <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+              </div>
+              <div class="form-group">
+                <label for="body">Body:</label>
+                <textarea id="body" name="body" rows="4" required></textarea>
+              </div>
+              <button type="submit">Add Note</button>
+            </form>
+          </div>
+        </section-with-title>
+      </div>
+    </main>    
+
+    <footer>
+      <footer-bar></footer-bar>
+    </footer>
+  </body>
+</html>
